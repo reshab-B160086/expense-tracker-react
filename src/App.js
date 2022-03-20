@@ -5,10 +5,11 @@ import Balance from "./components/Balance";
 import { IncomeExpenses } from "./components/IncomeExpenses";
 import { TransactionsList } from "./components/TransactionsList";
 import { AddTransactions } from "./components/AddTransactions";
+import { GlobalProvider } from "./components/context/GlobalState";
 
 function App() {
   return (
-    <div>
+    <GlobalProvider>
       <Headers />
       <div className=".container">
         <Balance />
@@ -16,7 +17,7 @@ function App() {
         <TransactionsList />
         <AddTransactions />
       </div>
-    </div>
+    </GlobalProvider>
   );
 }
 export default App;
